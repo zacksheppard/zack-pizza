@@ -151,6 +151,7 @@ body {
 .pizza {
   width: 20em;
   height: 20em;
+  right: 50em;
   border-radius: 20em;
   border: 1em solid #AB5F2B;
   background-color: #F3D255;
@@ -167,8 +168,6 @@ body {
   font-weight: 700;
   z-index: 100;
 }
-
-
 
 
 

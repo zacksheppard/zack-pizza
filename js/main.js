@@ -1,16 +1,16 @@
 $(document).ready(function () { 
-  AnimateRotate(360)
+  rotate('.pizza', 360);
+  $( ".pizza" ).animate({ "right": "-=50em" }, 2000 );
 });
 
-function AnimateRotate(d){
-    var elem = $(".pizza");
-
-    $({deg: 0}).animate({deg: d}, {
-        duration: 2000,
-        step: function(now){
-            elem.css({
-                 transform: "rotate(" + now + "deg)"
-            });
-        }
-    });
+function rotate(element, degrees){
+  var elem = $(element);
+  $({deg: 0}).animate({deg: degrees}, {
+    duration: 2000,
+    step: function(now){
+      elem.css({
+        transform: "rotate(" + now + "deg)"
+      });
+    }
+  });
 }
