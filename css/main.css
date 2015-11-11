@@ -119,6 +119,27 @@ div[class^="pepperoni-"] {
   position: absolute;
 }
 
+.pizza {
+  width: 25em;
+  height: 25em;
+  right: 50em;
+  border-radius: 20em;
+  border: 1em solid #AB5F2B;
+  background-color: #F3D255;
+  position: relative;
+  margin: auto;
+}
+
+.pizza-count {
+  font-size: 10em;
+  margin: .4em auto 0;
+  color: #8A2908;
+  /* position: absolute; */
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  z-index: 100;
+}
+
 .pepperoni-1 {
   top: 8em;
   left: 11em;
@@ -174,26 +195,6 @@ div[class^="pepperoni-"] {
   left: 2em;
 }
 
-.pizza {
-  width: 20em;
-  height: 20em;
-  right: 50em;
-  border-radius: 20em;
-  border: 1em solid #AB5F2B;
-  background-color: #F3D255;
-  position: relative;
-  margin: auto;
-}
-
-.pizza-count {
-  font-size: 9em;
-  margin: .3em auto 0;
-  color: #8A2908;
-  /* position: absolute; */
-  font-family: 'Lobster Two', cursive;
-  font-weight: 700;
-  z-index: 100;
-}
 
 
 
