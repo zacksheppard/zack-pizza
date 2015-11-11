@@ -30,3 +30,7 @@ function daysBetween(startDate, endDate){
   var diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime())/(millisecondsPerDay)));
   return diffDays;
 }
+
+function randBetween(lowerLimit, upperLimit){
+  return Math.floor((Math.random() * upperLimit) + lowerLimit);
+}

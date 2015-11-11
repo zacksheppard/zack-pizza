@@ -111,14 +111,6 @@ body {
   text-align: center;
 }
 
-div[class^="pepperoni-"] {
-  width: 2em;
-  height: 2em;
-  background-color: #B3241C;
-  border-radius: 2em;
-  position: absolute;
-}
-
 .pizza {
   width: 25em;
   height: 25em;
@@ -140,13 +132,21 @@ div[class^="pepperoni-"] {
   z-index: 100;
 }
 
+div[class^="pepperoni-"] {
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #B3241C;
+  border-radius: 2em;
+  position: absolute;
+}
+
 .pepperoni-1 {
-  top: 8em;
-  left: 11em;
+  top: 7em;
+  left: 18em;
 }
 
 .pepperoni-2 {
-  top: 5em;
+  top: 6em;
   left: 6em;
 }
 
@@ -176,7 +176,7 @@ div[class^="pepperoni-"] {
 }
 
 .pepperoni-8 {
-  top: 2em;
+  top: 1em;
   left: 8em;
 }
 
@@ -186,8 +186,8 @@ div[class^="pepperoni-"] {
 }
 
 .pepperoni-10 {
-  top: 13em;
-  left: 9em;
+  top: 12em;
+  left: 7em;
 }
 
 .pepperoni-11 {
@@ -195,16 +195,35 @@ div[class^="pepperoni-"] {
   left: 2em;
 }
 
+.pepperoni-12 {
+  top: 18.5em;
+  left: 6em;
+}
 
+.pepperoni-13 {
+  top: 11.5em;
+  left: 18.8em;
+}
 
+.pepperoni-14 {
+  top: 16em;
+  left: 17em;
+}
 
+.pepperoni-15 {
+  top: 18em;
+  left: 13.5em;
+}
 
+.pepperoni-16 {
+  top: 3.5em;
+  left: 10em;
+}
 
-
-
-
-
-
+.pepperoni-17 {
+  top: 3em;
+  left: 4em;
+}
 
 
 
