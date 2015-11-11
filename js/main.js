@@ -1,6 +1,19 @@
 $(document).ready(function () { 
+  var today = new Date();
+
   rotate('.pizza', 360);
   $( ".pizza" ).animate({ "right": "-=50em" }, 2000 );
+
+  $.get(
+    'https://blazing-heat-630.firebaseio.com/last_pizza_date.json', 
+    function(data){
+      var lastPizzaDate = new Date(data);
+      var diff = daysBetween(today, lastPizzaDate);
+      console.log(diff);
+      $('.pizza-count').text(diff);
+    }
+  );
+
 });
 
 function rotate(element, degrees){
@@ -13,4 +26,11 @@ function rotate(element, degrees){
       });
     }
   });
+}
+
+
+function daysBetween(startDate, endDate){
+  var millisecondsPerDay = 24 * 60 * 60 * 1000;
+  var diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime())/(millisecondsPerDay)));
+  return diffDays;
 }
