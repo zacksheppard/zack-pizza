@@ -10,7 +10,7 @@ $(document).ready(function () {
   );
 
   rotate('.pizza', 360);
-  $(".pizza").animate({"right": "-=90em"}, 2000 );
+  $(".pizza").animate({"right": "-=80em"}, 2000 );
 });
 
 function rotate(element, degrees){
