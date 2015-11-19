@@ -27,7 +27,7 @@ function rotate(element, degrees){
 
 function daysBetween(startDate, endDate){
   var millisecondsPerDay = 24 * 60 * 60 * 1000;
-  var diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime())/(millisecondsPerDay)));
+  var diffDays = Math.floor(Math.abs((startDate.getTime() - endDate.getTime())/(millisecondsPerDay)));
   return diffDays;
 }
 
