@@ -9,8 +9,8 @@ $(document).ready(function () {
     }
   );
 
-  rotate('.pizza', 360);
-  $(".pizza").animate({"right": "-=80em"}, 2000 );
+  rotate('.pizza-crust', 360);
+  $(".pizza-crust").animate({"right": "-=80em"}, 2000 );
 });
 
 function rotate(element, degrees){
