@@ -1,11 +1,17 @@
 $(document).ready(function () { 
   var today = new Date();
   $.get(
-    'https://blazing-heat-630.firebaseio.com/last_pizza_date.json', 
+    'https://blazing-heat-630.firebaseio.com/last_pizza.json', 
     function(data){
-      var lastPizzaDate = new Date(data);
+      var lastPizzaDate = new Date(data.date);
       var diff = daysBetween(today, lastPizzaDate);
       $('.pizza-count').text(diff);
+
+      if (data.location && 0 !== data.location.length) {
+        $('.location').append(
+          '<h2>at: <span>' + data.location + '</span></h2>'
+        );
+      }
     }
   );
 
