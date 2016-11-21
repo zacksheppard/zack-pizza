@@ -106,6 +106,19 @@ body {
   font-family: 'Lobster Two', cursive;
 }
 
+.location h2 {
+  text-align: center;
+  font-family: 'Lobster Two', cursive;
+  font-size: 2em;
+}
+
+.location span {
+  font-size: 1.5em;
+  font-family: Dancing Script;
+  color: #118c11;
+  font-weight: 200;
+}
+
 .main {
   margin: auto;
   text-align: center;
@@ -117,7 +130,6 @@ body {
   width: 25em;
   height: 25em;
   background-color: #AB5F2B;
-  /*border-radius: 20em;*/
   border-radius: 20em 19em 20em 22em;
   right: 80em;
 
@@ -125,7 +137,6 @@ body {
 }
 
 .pizza {
-  /*border-radius: 20em;*/
   border-radius: 21em 19.5em 22em 22em;
   position: relative;
   width: 22.5em;
