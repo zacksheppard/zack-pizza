@@ -27,6 +27,9 @@ module.exports = function(grunt) {
           'assets/prod/js/main.js' : ['assets/dev/js/main.js']
         }
       }
+    },
+    jshint: {
+      all: ['Gruntfile.js','assets/dev/js/*.js']
     }
 
   });
@@ -34,10 +37,12 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['css', 'js']);
   grunt.registerTask('js', ['babel','uglify']);
   grunt.registerTask('css', ['sass']);
+  grunt.registerTask('jslint', ['jshint']);
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
 
 
