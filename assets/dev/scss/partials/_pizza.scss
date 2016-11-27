@@ -1,0 +1,154 @@
+/*
+ * From: https://smacss.com/book/categorizing
+ *
+ * MODULES are the reusable, modular parts of our design. They are the callouts, 
+ * the sidebar sections, the product lists and so on.
+
+ * STATE rules are ways to describe how our modules or layouts will look when 
+ * in a particular state. Is it hidden or expanded? Is it active or inactive? 
+ * They are about describing how a module or layout looks on screens that are 
+ * smaller or bigger. They are also about describing how a module might look in 
+ * different views like the home page or the inside page.
+ 
+ *** Naming Convention
+ * Module rules should start with the name of the module.
+ * Related elements within a module shold use the base name as the prefix.
+  
+ *** Basic guidelines
+ * - When defining the rule set for a module, avoid using IDs and element 
+ *   selectors, sticking only to class names. 
+ * - Only include a selector that includes semantics.
+ * - Modules sit inside Layout components. 
+ * - Modules can sometimes sit within other Modules, too. 
+ * - Each Module should be designed to exist as a standalone component so it can 
+ * easily be moved to different parts of the layout without breaking.
+
+ * REMEMBER that these are guidelines not hard rules to never be broken
+ */
+
+.pizza-crust {
+  margin: auto;
+  position: relative;
+  width: 25em;
+  height: 25em;
+  background-color: #AB5F2B;
+  border-radius: 20em 19em 20em 22em;
+  right: 80em;
+
+  box-shadow: inset 0 0 1em #f8d206;
+}
+
+.pizza {
+  border-radius: 21em 19.5em 22em 22em;
+  position: relative;
+  width: 22.5em;
+  height: 22.5em;
+  background-color: #F3D255;
+  top: 1.25em;
+  left: 1.25em;
+  box-shadow: inset 0 0 9em #f6a519;
+}
+
+.pizza-count {
+  margin: .4em auto 0;
+  padding-top: .3em;
+  font-size: 10em;
+  color: #8A2908;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  z-index: 100;
+}
+
+div[class^="pepperoni-"] {
+  border-radius: 2em;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #B3241C;
+  position: absolute;
+  box-shadow: inset 0 0 13px #59130F;
+}
+
+.pepperoni-1 {
+  top: 7em;
+  left: 18em;
+}
+
+.pepperoni-2 {
+  top: 6em;
+  left: 6em;
+}
+
+.pepperoni-3 {
+  top: 3.3em;
+  left: 14em;
+}
+
+.pepperoni-4 {
+  top: 14em;
+  left: 3.5em;
+}
+
+.pepperoni-5 {
+  top: 12.7em;
+  left: 14em;
+}
+
+.pepperoni-6 {
+  top: 17em;
+  left: 10em;
+}
+
+.pepperoni-7 {
+  top: 10em;
+  left: 4em;
+}
+
+.pepperoni-8 {
+  top: 1em;
+  left: 8em;
+}
+
+.pepperoni-9 {
+  top: 9em;
+  left: 15em;
+}
+
+.pepperoni-10 {
+  top: 14em;
+  left: 7em;
+}
+
+.pepperoni-11 {
+  top: 7em;
+  left: 2em;
+}
+
+.pepperoni-12 {
+  top: 18.5em;
+  left: 6em;
+}
+
+.pepperoni-13 {
+  top: 11.5em;
+  left: 18.8em;
+}
+
+.pepperoni-14 {
+  top: 16em;
+  left: 17em;
+}
+
+.pepperoni-15 {
+  top: 18em;
+  left: 13.5em;
+}
+
+.pepperoni-16 {
+  top: 3.5em;
+  left: 10em;
+}
+
+.pepperoni-17 {
+  top: 3em;
+  left: 4em;
+}

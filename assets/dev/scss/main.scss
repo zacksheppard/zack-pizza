@@ -1,0 +1,36 @@
+// Vendor
+@import "vendor/normalize";
+@import "vendor/html5boilerplate";
+@import "vendor/bootstrap";
+
+// Base styles and layout
+@import "partials/base";
+@import "partials/layout";
+
+// Modules
+@import "partials/pizza";
+
+
+/**
+ * Concatenating files is done through the SCSS @import directives above.
+ * These @import rules will be replaced by the CSS rules contained within
+ * Sass project example directory layout:
+ * http://thesassway.com/beginner/how-to-structure-a-sass-project
+ *
+ *  Using SMACSS for organizing CSS rules:
+ *    https://smacss.com/book/categorizing
+ */
+
+
+.location h2 {
+  text-align: center;
+  font-family: 'Lobster Two', cursive;
+  font-size: 2em;
+}
+
+.location span {
+  font-size: 1.5em;
+  font-family: Dancing Script;
+  color: #118c11;
+  font-weight: 200;
+}
