@@ -1577,16 +1577,6 @@ hr {
 .affix {
   position: fixed; }
 
-/**
- * Base
- * 
- * Quoting from https://smacss.com/book/categorizing
- * "Base rules are the defaults. They are almost exclusively single element 
- *  selectors but it could include attribute selectors, pseudo-class selectors, 
- *  child selectors or sibling selectors. Essentially, a base style says that 
- *  wherever this element is on the page, it should look like this."
- *
- */
 body {
   background-image: url(../img/tablecloth.jpg); }
 
@@ -1595,42 +1585,10 @@ body {
   font-size: 3em;
   font-family: 'Lobster Two', cursive; }
 
-/* Layout
- * Layout is mostly in bootstrap but some layout rules might be in here. 
- * For layout rules start them with `layout-`
- * more: https://smacss.com/book/type-layout
- */
 .layout-main {
   margin: auto;
   text-align: center; }
 
-/*
- * From: https://smacss.com/book/categorizing
- *
- * MODULES are the reusable, modular parts of our design. They are the callouts, 
- * the sidebar sections, the product lists and so on.
-
- * STATE rules are ways to describe how our modules or layouts will look when 
- * in a particular state. Is it hidden or expanded? Is it active or inactive? 
- * They are about describing how a module or layout looks on screens that are 
- * smaller or bigger. They are also about describing how a module might look in 
- * different views like the home page or the inside page.
- 
- *** Naming Convention
- * Module rules should start with the name of the module.
- * Related elements within a module shold use the base name as the prefix.
-  
- *** Basic guidelines
- * - When defining the rule set for a module, avoid using IDs and element 
- *   selectors, sticking only to class names. 
- * - Only include a selector that includes semantics.
- * - Modules sit inside Layout components. 
- * - Modules can sometimes sit within other Modules, too. 
- * - Each Module should be designed to exist as a standalone component so it can 
- * easily be moved to different parts of the layout without breaking.
-
- * REMEMBER that these are guidelines not hard rules to never be broken
- */
 .pizza-crust {
   margin: auto;
   position: relative;
@@ -1736,24 +1694,15 @@ div[class^="pepperoni-"] {
   top: 3em;
   left: 4em; }
 
-/**
- * Concatenating files is done through the SCSS @import directives above.
- * These @import rules will be replaced by the CSS rules contained within
- * Sass project example directory layout:
- * http://thesassway.com/beginner/how-to-structure-a-sass-project
- *
- *  Using SMACSS for organizing CSS rules:
- *    https://smacss.com/book/categorizing
- */
 .location h2 {
-  text-align: center;
   font-family: 'Lobster Two', cursive;
-  font-size: 2em; }
+  font-size: 2em;
+  text-align: center; }
 
 .location span {
-  font-size: 1.5em;
-  font-family: Dancing Script;
   color: #118c11;
+  font-family: 'Dancing Script';
+  font-size: 1.5em;
   font-weight: 200; }
 
 /*# sourceMappingURL=main.css.map */

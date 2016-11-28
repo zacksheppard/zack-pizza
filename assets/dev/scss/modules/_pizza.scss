@@ -1,30 +1,28 @@
-/*
- * From: https://smacss.com/book/categorizing
- *
- * MODULES are the reusable, modular parts of our design. They are the callouts, 
- * the sidebar sections, the product lists and so on.
+// From: https://smacss.com/book/categorizing
+//
+// MODULES are the reusable, modular parts of our design. They are the callouts, 
+// the sidebar sections, the product lists and so on.
+//
+// STATE rules are ways to describe how our modules or layouts will look when 
+// in a particular state. Is it hidden or expanded? Is it active or inactive? 
+// They are about describing how a module or layout looks on screens that are 
+// smaller or bigger. They are also about describing how a module might look in 
+// different views like the home page or the inside page.
+//
+// ** Naming Convention
+// Module rules should start with the name of the module.
+// Related elements within a module shold use the base name as the prefix.
+//
+// ** Basic guidelines
+// - When defining the rule set for a module, avoid using IDs and element 
+//   selectors, sticking only to class names. 
+// - Only include a selector that includes semantics.
+// - Modules sit inside Layout components. 
+// - Modules can sometimes sit within other Modules, too. 
+// - Each Module should be designed to exist as a standalone component so it can 
+// easily be moved to different parts of the layout without breaking.
 
- * STATE rules are ways to describe how our modules or layouts will look when 
- * in a particular state. Is it hidden or expanded? Is it active or inactive? 
- * They are about describing how a module or layout looks on screens that are 
- * smaller or bigger. They are also about describing how a module might look in 
- * different views like the home page or the inside page.
- 
- *** Naming Convention
- * Module rules should start with the name of the module.
- * Related elements within a module shold use the base name as the prefix.
-  
- *** Basic guidelines
- * - When defining the rule set for a module, avoid using IDs and element 
- *   selectors, sticking only to class names. 
- * - Only include a selector that includes semantics.
- * - Modules sit inside Layout components. 
- * - Modules can sometimes sit within other Modules, too. 
- * - Each Module should be designed to exist as a standalone component so it can 
- * easily be moved to different parts of the layout without breaking.
-
- * REMEMBER that these are guidelines not hard rules to never be broken
- */
+// REMEMBER that these are guidelines not hard rules to never be broken
 
 .pizza-crust {
   margin: auto;
@@ -34,7 +32,6 @@
   background-color: #AB5F2B;
   border-radius: 20em 19em 20em 22em;
   right: 80em;
-
   box-shadow: inset 0 0 1em #f8d206;
 }
 
