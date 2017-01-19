@@ -27,7 +27,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'assets/prod/js/main.js': 'assets/dev/js/main.js'
+          'assets/prod/js/main.js': 'assets/dev/js/main.js',
+          'assets/prod/js/main-try-wp-api.js': 'assets/dev/js/main-try-wp-api.js'
         }
       }
     },
