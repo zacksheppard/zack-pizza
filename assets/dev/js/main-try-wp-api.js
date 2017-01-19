@@ -1,15 +1,15 @@
 $(document).ready(function () { 
-  var today = new Date();
+  const today = new Date();
   $.get(
-    'http://zack.io/wp-json/wp/v2/posts', 
+    'http://zack.io/wp-json/wp/v2/zackio_pizza', 
     function(data){
       const lastPizzaDate = new Date(data[0].date);
-      var diff = daysBetween(today, lastPizzaDate);
+      const diff = daysBetween(today, lastPizzaDate);
       $('.pizza-count').text(diff);
 
-      if (data.location && 0 !== data.location.length) {
+      if (data[0].title.rendered) {
         $('.location').append(
-          '<h2>at: <span>' + data.location + '</span></h2>'
+          '<h2>at: <span>' + data[0].title.rendered + '</span></h2>'
         );
       }
     }
