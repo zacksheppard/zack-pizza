@@ -40,10 +40,3 @@ function daysBetween(startDate, endDate){
 function randBetween(lowerLimit, upperLimit){
   return Math.floor((Math.random() * upperLimit) + lowerLimit);
 }
-
-require('env2')('.env');
-console.log(process.env);
-console.log(process.env.FSQUARE)
-
-
-

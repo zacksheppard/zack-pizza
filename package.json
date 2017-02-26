@@ -29,8 +29,5 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
     "jshint-stylish": "latest"
-  },
-  "dependencies": {
-    "env2": "^2.1.1"
   }
 }
