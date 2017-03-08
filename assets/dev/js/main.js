@@ -1,29 +1,29 @@
-$(document).ready(function () { 
-  var today = new Date();
-  $.get(
-    'https://blazing-heat-630.firebaseio.com/last_pizza.json', 
-    function(data){
-      var lastPizzaDate = new Date(data.date);
-      var diff = daysBetween(today, lastPizzaDate);
-      $('.pizza-count').text(diff);
+$(document).ready(function () {
+  const pizza = (<Pizza></Pizza>);
+  ReactDOM.render(pizza, document.querySelector('.layout-main'));
+  const today = new Date();
+  $.get('http://zack.io/wp-json/wp/v2/zackio_pizza', function (data) {
 
-      if (data.location && 0 !== data.location.length) {
-        $('.location').append(
-          '<h2>at: <span>' + data.location + '</span></h2>'
-        );
-      }
+    const lastPizzaDate = new Date(data[0].date);
+    const diff = daysBetween(today, lastPizzaDate);
+    $('.pizza-count').text(diff);
+
+    if (data[0].title.rendered) {
+      $('.location').append('<h2>at: <span>' + data[0].title.rendered + '</span></h2>');
     }
-  );
 
-  rotate('.pizza-crust', 360);
-  $(".pizza-crust").animate({"right": "-=80em"}, 2000 );
+    rotate('.pizza-crust', 360);
+    $(".pizza-crust").animate({ "right": "-=80em" }, 2000);
+
+  });
+
 });
 
-function rotate(element, degrees){
-  var elem = $(element);
-  $({deg: 0}).animate({deg: degrees}, {
+function rotate(element, degrees) {
+  const elem = $(element);
+  $({ deg: 0 }).animate({ deg: degrees }, {
     duration: 2000,
-    step: function(now){
+    step: function step(now) {
       elem.css({
         transform: "rotate(" + now + "deg)"
       });
@@ -31,12 +31,40 @@ function rotate(element, degrees){
   });
 }
 
-function daysBetween(startDate, endDate){
-  var millisecondsPerDay = 24 * 60 * 60 * 1000;
-  var diffDays = Math.floor(Math.abs((startDate.getTime() - endDate.getTime())/(millisecondsPerDay)));
+function daysBetween(startDate, endDate) {
+  const millisecondsPerDay = 24 * 60 * 60 * 1000;
+  const diffDays = Math.floor(
+    Math.abs((startDate.getTime() - endDate.getTime()) / millisecondsPerDay)
+  );
   return diffDays;
 }
 
-function randBetween(lowerLimit, upperLimit){
-  return Math.floor((Math.random() * upperLimit) + lowerLimit);
-}
+
+const Toppings = React.createClass({
+  render: function() {
+    const toppings = [];
+    for (let i=0; i < 17; i++) { toppings.push('pepperoni'); }
+    const preparedToppings = toppings.map((topping) => { 
+      return <div className={topping}></div>;
+    });
+    console.log(preparedToppings);
+
+    return(
+      <div>{preparedToppings}</div>
+    )
+  }
+});
+
+const Pizza = React.createClass({
+  render: function() {
+    return (
+      <div className="pizza-crust">
+        <div className="pizza">
+          <p className="pizza-count"></p>
+          <Toppings />
+        </div>
+      </div>
+    )
+  }
+});
+

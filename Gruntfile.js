@@ -27,15 +27,9 @@ module.exports = function(grunt) {
         plugins: ['transform-react-jsx'],
         presets: ['es2015', 'react']
       },
-      dist: {
-        files: {
-          'assets/prod/js/main.js': 'assets/dev/js/main.js',
-          'assets/prod/js/main-try-wp-api.js': 'assets/dev/js/main-try-wp-api.js'
-        }
-      },
       jsx: {
         files: [{
-          'assets/prod/js/main-react.js': 'assets/dev/js/main-react.js'
+          'assets/prod/js/main.js': 'assets/dev/js/main.js'
         }]
       }
     },
@@ -66,7 +60,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['css', 'js']);
-  grunt.registerTask('js', ['babel','uglify']);
+  grunt.registerTask('js', ['babel']);
   grunt.registerTask('css', ['sass','cssmin']);
   grunt.registerTask('jslint', ['jshint']);
   grunt.registerTask('watch', ['watch']);

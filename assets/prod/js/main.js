@@ -1,1 +1,77 @@
-function rotate(a,b){var c=$(a);$({deg:0}).animate({deg:b},{duration:2e3,step:function(a){c.css({transform:"rotate("+a+"deg)"})}})}function daysBetween(a,b){return Math.floor(Math.abs((a.getTime()-b.getTime())/864e5))}function randBetween(a,b){return Math.floor(Math.random()*b+a)}$(document).ready(function(){var a=new Date;$.get("https://blazing-heat-630.firebaseio.com/last_pizza.json",function(b){var c=new Date(b.date),d=daysBetween(a,c);$(".pizza-count").text(d),b.location&&0!==b.location.length&&$(".location").append("<h2>at: <span>"+b.location+"</span></h2>")}),rotate(".pizza-crust",360),$(".pizza-crust").animate({right:"-=80em"},2e3)});
+'use strict';
+
+$(document).ready(function () {
+  var pizza = React.createElement(Pizza, null);
+  ReactDOM.render(pizza, document.querySelector('.layout-main'));
+  var today = new Date();
+  $.get('http://zack.io/wp-json/wp/v2/zackio_pizza', function (data) {
+
+    var lastPizzaDate = new Date(data[0].date);
+    var diff = daysBetween(today, lastPizzaDate);
+    $('.pizza-count').text(diff);
+
+    if (data[0].title.rendered) {
+      $('.location').append('<h2>at: <span>' + data[0].title.rendered + '</span></h2>');
+    }
+
+    rotate('.pizza-crust', 360);
+    $(".pizza-crust").animate({ "right": "-=80em" }, 2000);
+  });
+});
+
+function rotate(element, degrees) {
+  var elem = $(element);
+  $({ deg: 0 }).animate({ deg: degrees }, {
+    duration: 2000,
+    step: function step(now) {
+      elem.css({
+        transform: "rotate(" + now + "deg)"
+      });
+    }
+  });
+}
+
+function daysBetween(startDate, endDate) {
+  var millisecondsPerDay = 24 * 60 * 60 * 1000;
+  var diffDays = Math.floor(Math.abs((startDate.getTime() - endDate.getTime()) / millisecondsPerDay));
+  return diffDays;
+}
+
+var Toppings = React.createClass({
+  displayName: 'Toppings',
+
+  render: function render() {
+    var toppings = [];
+    for (var i = 0; i < 17; i++) {
+      toppings.push('pepperoni');
+    }
+    var preparedToppings = toppings.map(function (topping) {
+      return React.createElement('div', { className: topping });
+    });
+    console.log(preparedToppings);
+
+    return React.createElement(
+      'div',
+      null,
+      preparedToppings
+    );
+  }
+});
+
+var Pizza = React.createClass({
+  displayName: 'Pizza',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'pizza-crust' },
+      React.createElement(
+        'div',
+        { className: 'pizza' },
+        React.createElement('p', { className: 'pizza-count' }),
+        React.createElement(Toppings, null)
+      )
+    );
+  }
+});
+//# sourceMappingURL=main.js.map
