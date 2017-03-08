@@ -1,8 +1,10 @@
+'use strict';
+
 $(document).ready(function () {
-  const today = new Date();
+  var today = new Date();
   $.get('http://zack.io/wp-json/wp/v2/zackio_pizza', function (data) {
-    const lastPizzaDate = new Date(data[0].date);
-    const diff = daysBetween(today, lastPizzaDate);
+    var lastPizzaDate = new Date(data[0].date);
+    var diff = daysBetween(today, lastPizzaDate);
     $('.pizza-count').text(diff);
 
     if (data[0].title.rendered) {
@@ -18,7 +20,7 @@ function rotate(element, degrees) {
   var elem = $(element);
   $({ deg: 0 }).animate({ deg: degrees }, {
     duration: 2000,
-    step: function (now) {
+    step: function step(now) {
       elem.css({
         transform: "rotate(" + now + "deg)"
       });

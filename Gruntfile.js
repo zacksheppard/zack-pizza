@@ -24,14 +24,22 @@ module.exports = function(grunt) {
     babel: {
       options: {
         sourceMap: true,  
+        plugins: ['transform-react-jsx'],
+        presets: ['es2015', 'react']
       },
       dist: {
         files: {
           'assets/prod/js/main.js': 'assets/dev/js/main.js',
           'assets/prod/js/main-try-wp-api.js': 'assets/dev/js/main-try-wp-api.js'
         }
+      },
+      jsx: {
+        files: [{
+          'assets/prod/js/main-react.js': 'assets/dev/js/main-react.js'
+        }]
       }
     },
+
     uglify: {
       my_target: {
         files: {
