@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const pizza = (<Pizza></Pizza>);
-  ReactDOM.render(pizza, document.querySelector('.layout-main'));
+  ReactDOM.render(pizza, document.querySelector('.react-root'));
   const today = new Date();
   $.get('http://zack.io/wp-json/wp/v2/zackio_pizza', function (data) {
 

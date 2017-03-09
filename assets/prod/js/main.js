@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
   var pizza = React.createElement(Pizza, null);
-  ReactDOM.render(pizza, document.querySelector('.layout-main'));
+  ReactDOM.render(pizza, document.querySelector('.react-root'));
   var today = new Date();
   $.get('http://zack.io/wp-json/wp/v2/zackio_pizza', function (data) {
 
