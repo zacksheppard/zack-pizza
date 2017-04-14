@@ -1,0 +1,54 @@
+// Vendor
+@import "css/vendor/normalize";
+@import "css/vendor/html5boilerplate";
+@import "css/vendor/bootstrap";
+
+// Base styles and layout
+@import "css/partials/base";
+@import "css/partials/layout";
+
+// Modules
+@import "css/modules/pizza";
+
+// Concatenating files is done through the SCSS @import directives above.
+// These @import rules will be replaced by the CSS rules contained within
+// Sass project example directory layout:
+// http://thesassway.com/beginner/how-to-structure-a-sass-project
+//
+//  Using SMACSS for organizing CSS rules:
+//    https://smacss.com/book/categorizing
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rollin-enter {
+  transition: all 2s;
+  transform: translateX(-200%) rotate(-360deg);
+  &.rollin-enter-active {
+    transform: translateX(0) rotate(0);
+  }
+}
+
