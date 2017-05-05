@@ -11,15 +11,3 @@ export function decodeHtmlEntity(str) {
     (match, unicodeValue) => String.fromCharCode(unicodeValue) 
   );
 };
-
-// function rotate(element, degrees) {
-//   const elem = $(element);
-//   $({ deg: 0 }).animate({ deg: degrees }, {
-//     duration: 2000,
-//     step: function step(now) {
-//       elem.css({
-//         transform: "rotate(" + now + "deg)"
-//       });
-//     }
-//   });
-// }

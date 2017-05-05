@@ -32,7 +32,8 @@ class CheckIn extends Component {
               {decodeHtmlEntity(this.props.details.acf.name)}
             </p>
             <p className="topping-list">
-              {this.getToppings().map( (t, i) => <span key={i} >{t.name}</span>)}
+              {this.getToppings()
+                .map( (t, i) => <span key={i} >{t.name} </span>)}
             </p>
           </div>
 
