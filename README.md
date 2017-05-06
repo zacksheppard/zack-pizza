@@ -1,6 +1,8 @@
 # zack.pizza
 
-My site for pizza themed coding projects.
+My site for pizza themed coding projects. 
+
+Currently it is a React app that pulls pizza data from the WordPress API on zack.io. zack.io has a 'Pizza' post type that isn't shown on the site but exposed in the API.
 
 ## Development
 
