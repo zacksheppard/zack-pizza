@@ -26,9 +26,9 @@ class CheckIn extends Component {
       
     return (
         <div 
-          className="col-md-5 col-md-push-1 col-sm-6 col-sm-push-0 col-xs-10 col-xs-push-1"
+          className="checkin col-md-5 col-md-push-1 col-sm-6 col-sm-push-0 col-xs-10 col-xs-push-1"
         >
-          <div className="checkin">
+          <div className="whiteboard">
             <p className="date">{formattedDate}</p>
             <h3 className="location">
               @ <span> {decodeHtmlEntity(this.props.details.title.rendered)}</span>

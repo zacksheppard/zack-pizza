@@ -1,0 +1,53 @@
+
+.whiteboard {
+  border: 6px solid rgba(184, 134, 11, 0.35);
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px #cccccc;
+  background: #fbfbfb;
+  margin-bottom: 1.5em;
+
+  & .date {
+    transform: rotate(-43deg);
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    font-weight: 800;
+    font-family: 'Rock Salt';
+    font-size: 0.7em;
+  }
+  & .location {
+    margin: .2em 0 .4em 3.6em;
+    font-family: 'Dancing Script';
+    font-size: 1.4em;
+  }
+  & .description {
+    font-family: 'Permanent Marker', 'Rock Salt';
+    margin: 0em 0 0 4em;
+    font-size: 1.3em;
+    font-weight: 100;
+    color: #d083d4;
+  }
+}
+
+
+.topping-list {
+  margin-left: 5em;
+  & span {
+    color: goldenrod;
+    border: 1px solid #f5db9b;
+    background-color: rgba(255, 239, 199, 0.22);
+    font-family: 'Patrick Hand SC';
+    border-radius: 5px;
+    padding: 0 3px;
+    margin: 0 2px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: .5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .checkin:nth-of-type(2n+1) {
+    clear: left;
+  }
+}
